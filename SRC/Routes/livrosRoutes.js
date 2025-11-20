@@ -1,15 +1,16 @@
 const express = require("express");
+const connection = require ('../Config/db');
 const router = express.Router();
-const livroController = require("../Controllers/livroController");
+const livrosController = require("../Controllers/livrosController");
 
-router.get("/", livroController.buscarTodos);
+router.get("/", livrosController.buscarTodos);
 
-router.get("/:id", livroController.buscarPorId);
+router.get("/:id", livrosController.buscarPorId);
 
-router.post("/", livroController.criarLivro);
+router.post("/", livrosController.criarLivro);
 
-router.put("/:id", livroController.atualizarLivro);
+router.put("/:id", livrosController.atualizarLivro);
 
-router.delete("/:id", livroController.deletarLivro);
+router.delete("/:id", livrosController.deletarLivro);
 
-module.exports = router;
+module.exports = router; 
