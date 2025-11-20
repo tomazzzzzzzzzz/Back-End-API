@@ -29,7 +29,7 @@ const usuarioController = {
         });
     },
 
-    criarUsuario: (req, res) => {
+    adicionarUsuario: (req, res) => {
         const dados = req.body;
 
         usuarioModel.criarUsuario(dados, (err, result) => {

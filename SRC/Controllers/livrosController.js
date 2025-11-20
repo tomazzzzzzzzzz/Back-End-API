@@ -29,7 +29,7 @@ const livrosController = {
         });
     },
 
-    criarLivro: (req, res) => {
+    adicionarLivro: (req, res) => {
         const dados = req.body;
 
         livrosModel.criarLivro(dados, (err, result) => {

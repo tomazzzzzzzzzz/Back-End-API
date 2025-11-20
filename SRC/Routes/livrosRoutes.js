@@ -7,7 +7,7 @@ router.get("/", livrosController.buscarTodos);
 
 router.get("/:id", livrosController.buscarPorId);
 
-router.post("/", livrosController.criarLivro);
+router.post("/", livrosController.adicionarLivro);
 
 router.put("/:id", livrosController.atualizarLivro);
 
