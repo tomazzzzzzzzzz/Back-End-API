@@ -32,7 +32,7 @@ const emprestimosController = {
     adicionarEmprestimo: (req, res) => {
         const dados = req.body;
 
-        emprestimosModel.criarEmprestimo(dados, (err, result) => {
+        emprestimosModel.adicionarEmprestimo(dados, (err, result) => {
             if (err) {
                 console.error("Erro ao Adicionar um novo emprestimo:", err);
                 return res.status(500).json({erro: "Erro ao Adicionar um novo emprestimo: "});

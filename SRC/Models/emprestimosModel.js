@@ -10,14 +10,14 @@ const emprestimosModel = {
         connection.query(sql, [id], callback);
     },
 
-    criarEmprestimo: (dados, callback) => {
-            const sql = "INSERT INTO emprestimos (id_livro, nome_pessoa, data_emprestimo) VALUES (?, ?, ?)";
-            connection.query(sql, [dados.id_livro, dados.nome_pessoa, dados.data_emprestimo], callback);
+    adicionarEmprestimo: (dados, callback) => {
+            const sql = "INSERT INTO emprestimos (id_livro, nome_pessoa, data_emprestimo, data_devolucao) VALUES (?, ?, ?, ?)";
+            connection.query(sql, [dados.id_livro, dados.nome_pessoa, dados.data_emprestimo, dados.data_devolucao], callback);
 },
 
     atualizarEmprestimo: (id, dados, callback) => {
-        const sql = "UPDATE emprestimos SET id_livro = ?, nome_pessoa = ?, data_emprestimo = ? WHERE id = ?"
-        connection.query(sql, [dados.id_livro, dados.nome_pessoa, dados.data_emprestimo, id], callback)
+        const sql = "UPDATE emprestimos SET id_livro = ?, nome_pessoa = ?, data_emprestimo = ?, data_devolucao = ? WHERE id = ?"
+        connection.query(sql, [dados.id_livro, dados.nome_pessoa, dados.data_emprestimo, dados.data_devolucao, id], callback)
     },
 
     deletarEmprestimo: (id, callback) => {

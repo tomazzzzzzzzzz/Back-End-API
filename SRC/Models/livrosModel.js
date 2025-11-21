@@ -11,7 +11,7 @@ const livrosModel = {
         connection.query(sql, [id], callback);
     },
 
-    criarLivro: (dados, callback) => {
+    adicionarLivro: (dados, callback) => {
             const sql = "INSERT INTO livros (titulo, autor, ano) VALUES (?, ?, ?)";
             connection.query(sql, [dados.titulo, dados.autor, dados.ano], callback);
     },

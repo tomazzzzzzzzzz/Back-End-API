@@ -32,7 +32,7 @@ const livrosController = {
     adicionarLivro: (req, res) => {
         const dados = req.body;
 
-        livrosModel.criarLivro(dados, (err, result) => {
+        livrosModel.adicionarLivro(dados, (err, result) => {
             if (err) {
                 console.error("Erro ao Adicionar um novo livro:", err);
                 return res.status(500).json({erro: "Erro ao Adicionar um novo livro: "});
